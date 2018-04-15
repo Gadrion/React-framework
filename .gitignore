@@ -9,6 +9,15 @@
 # production
 /build
 
+#css
+/src/*.css
+/src/*.map
+/src/**/*.css
+/src/**/*.map
+
+#vscode
+/.vscode/*
+
 # misc
 .DS_Store
 .env.local

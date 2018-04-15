@@ -4,18 +4,24 @@ import 'raf/polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './containers/App';
 
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './modules';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './sagas/saga';
+import axios from 'axios';
 
-import 'semantic-ui-css/semantic.min.css';
 // import registerServiceWorker from './registerServiceWorker';
 // registerServiceWorker();
+
+const initAxios = _ => {
+    const baseURL = 'http://localhost:3000';
+    axios.defaults.baseURL = baseURL;
+};
+
+initAxios();
 
 const sagaMiddleware = createSagaMiddleware();
 // const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -29,6 +35,6 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <Provider store={store}>
         <App />
-    </Provider>, 
+    </Provider>,
     document.getElementById('root')
 );

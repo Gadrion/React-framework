@@ -1,0 +1,82 @@
+/*
+    Define UsergroupContainer style
+*/
+.usergroup-container{
+    font-weight: 700;
+    label {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 13px;
+    }
+    input{
+        width: 75%;
+    }
+
+    input[type='radio'] {
+        width: 10%;
+    }
+
+    ::placeholder{
+        color: #ddd6d6;
+    }
+
+    textarea {
+        padding-left: 10px;
+        width: 75%;
+    }
+
+    .btn-group {
+        width: 75%;
+        text-align: right;
+        display: block;
+
+        button{
+            width: 70px;
+            margin-left: 5px;
+        }
+    }
+}
+
+/*
+    Define TreenodeContainer style
+*/
+.treenode-container {
+    height: 480px;
+    border: 1px solid #d2d2d2;
+    margin-top: 40px;
+
+    //treebeard
+    ul{
+        padding: 0 !important;
+        background-color: white !important;
+        font-family: "NotoSans" !important;
+    }
+
+    li{
+        color: #212529 !important;
+    }
+
+    .treebeard-toogle{
+        float: left;
+        margin-top: 5px;
+    }
+    
+    .treebeard-header svg{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .treebeard-header{
+        height: 28px;
+        padding-top: 5px;
+
+        &:hover {
+            background-color: #ff9832;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    .active{
+        color: #ff9832;
+    }
+}

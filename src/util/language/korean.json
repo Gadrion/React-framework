@@ -1,0 +1,23 @@
+{
+    "test": "tttt",
+    "test1": "tttt1",
+    "test2": "tttt2",
+    "true?": "asdasd",
+    "logo": "와이즈넷",
+    "login": "로그인",
+    "id": "아이디",
+    "pw": "비밀번호",
+    "dashboard": "대시보드",
+    "store": "스토어",
+    "analytics": "분석",
+    "setup": "설정",
+    "logout": "로그아웃",
+    "logout_desc": "로그아웃 하시겠습니까?",
+    "ok":"확인",
+    "cancel": "취소",
+    "counting": "카운팅",
+    "queue": "큐",
+    "heatmap": "히트맵",
+    "user": "사용자",
+    "site": "사이트"
+}

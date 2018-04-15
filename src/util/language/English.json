@@ -1,0 +1,23 @@
+{
+    "test": "tttt",
+    "test1": "tttt1",
+    "test2": "tttt2",
+    "true?": "asdasd",
+    "logo": "Wisenet",
+    "login": "Login",
+    "id": "ID",
+    "pw": "Password",
+    "dashboard": "Dashboard",
+    "store": "Store",
+    "analytics": "Analytics",
+    "setup": "Setup",
+    "logout": "Logout",
+    "logout_desc": "Are you sure, you want to logout?",
+    "ok":"OK",
+    "cancel": "Cancel",
+    "counting": "Counting",
+    "queue": "Queue",
+    "heatmap": "Heatmap",
+    "user": "User",
+    "site": "Site"
+}

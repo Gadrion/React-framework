@@ -1,0 +1,320 @@
+/*
+  Define Common styles
+*/
+html, body, #root {
+  height:100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+select,
+textarea,
+body {
+  font-family: "NotoSans" !important;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+a,
+input,
+button,
+select,
+textarea {
+  outline: 0 !important;
+  &:focus,
+  &:active {
+    outline: 0 !important;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0 !important;
+  list-style: none;
+}
+
+a{
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+input[type='text'], 
+input[type='password'], 
+textarea {
+  padding-left: 10px;
+  border: 1px solid #d2d2d2;
+  &:focus {
+    border-color: #f8ab7a !important;
+    color: #000000 !important;
+    background-color: #ffffff !important;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: 1px solid #a5a5a5;
+  color: #4c4c4c;
+  background-color: #ffffff;
+  &:active, &:hover {
+    border: 1px solid #a5a5a5 !important;
+    color: #4c4c4c !important;
+    background-color: #d2d2d2 !important;
+  }
+  &.primary {
+    border: 1px solid #f8ab7a !important;
+    color: #f37321 !important;
+    background-color: #ffffff !important;
+
+    &:active, &:hover {
+      border: 1px solid #f37321 !important;
+      color: #fff !important;
+      background-color: #f37321 !important;
+    }
+  }
+}
+
+.Dropdown-control {
+  height: inherit;  
+}
+
+.Dropdown-menu {
+  .Dropdown-option {
+    &.is-selected {
+      background-color: #fff;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #f37321;
+    }
+  }
+}
+
+.content {
+  margin: 10px;
+}
+.content-isMenu {
+  max-width: 1280px;
+  margin-left: 250px;
+  padding: 20px 0 0 30px;
+}
+
+/*
+  Define TitleHeader Styles
+*/
+.setup-header {
+  .setup-hr {
+    margin: 15px 0;
+  }
+}
+
+/*
+  Define BaseRoute styles
+*/
+.baseRoute {
+  height: 100%;
+
+  .row {
+      margin: 0;
+      .col {
+          padding: 0;
+          padding-right: 30px;
+      }
+  }
+
+  .menuBar {
+      width: 250px;
+      border-right: 1px solid #c9c9c9;
+      height: 100%;
+      position: absolute;
+      
+  }
+
+  .contents {
+      margin-left: 250px;
+  }
+}
+
+@media(max-width: 1020px) {
+  .menuBar {
+      display:none;
+  }
+  .content-isMenu {
+      margin-left: 0;
+  }
+}
+
+@media(max-width: 700px) {
+  .col {
+      flex: inherit; 
+  }
+}
+
+/*
+  Define NavigationBar Styles
+*/
+.navigation-bar {
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  padding: 0 20px;
+  .logo {
+      float: left;
+      .logo-lg {
+          margin-top: 17px; 
+          height: 16px;
+      }
+      .logo-sm {
+          margin-top: 14.5px;
+          display: none;
+      }
+      img {
+          &:hover {
+              cursor: pointer;
+          }
+      }
+      @media(max-width: 799px){
+          .logo-lg {
+              display: none;
+          }
+          .logo-sm {
+              display: block;
+          }
+      }
+  }
+  .menu {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: inherit;
+      transform: translateX(-50%);
+      display: block;
+      padding-top: 13px;
+      font-size: 16px;
+      a {
+          color: #000000;
+          margin: 0 15px;
+          &.active{
+              color: #ff9832;
+          }
+      }
+  }
+  .auth {
+      float: right;
+      height: inherit;
+      margin-top: 15px;
+      font-size: 12px;
+      span {
+          margin-left: 5px;
+      }
+      &:hover {
+          cursor: pointer;
+          color: #ff9832
+      }
+  }
+}
+
+/*
+  Define Modal Styles
+*/
+.modal-bg {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.4);
+  .modal-box {
+      position: absolute;
+      background-color: #FFF;
+      left: 50%;
+      top: 50%;
+      min-width: 450px;
+      width: auto;
+      max-height: 750px;
+      height: auto;
+      transform: translateZ(0) translate(-50%, -50%);
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+      .modal-head {
+          padding: 0 20px;
+          background-color: #f8ab7a;
+          color: #fff;
+          line-height: 50px;
+          font-size: 17px;
+      }
+
+      .modal-body {
+          padding: 20px;
+          text-align: center;
+          font-size: 13px;
+          color:#000;
+          font-weight: 600;
+      }
+
+      .modal-foot {
+          border: 1px solid #d2d2d2;
+          height: 60px;
+          text-align: center;
+          padding: 15px;
+          button {
+              min-width: 100px;
+              height: 30px;
+              font-size:13px;
+              margin-left: 10px;
+          }
+      }
+  }
+}
+
+/*
+  Define Menubar styles
+*/
+.menu-bar{
+  margin-top: 20px;
+
+  a {
+      display: block;
+      width: 100%;
+      font-weight: 700;
+      font-size: 14px;
+      color: #4c4c4c;
+      padding: 10px 15px;
+
+      &.active{
+          color: #ff9832;
+      }
+
+      &:hover {
+          background-color: #ff9832;
+          color: #fff;
+      }
+
+      svg {
+          margin-right: 10px;
+          transform: translateY(-2px);
+          font-size: 20px;
+      }
+  }
+}

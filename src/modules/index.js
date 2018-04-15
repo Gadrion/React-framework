@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux';
 
-import loginModule from './loginModule';
+import loginModule from './login/loginModule';
+import langModule from './common/langModule';
+import usergroupModule from './setup/usergroup/usergroupModule';
 
 export default combineReducers({
-    loginModule
+    langModule,
+    loginModule,
+    usergroupModule
 });
